@@ -1,1 +1,6 @@
 .forms/
+credentials.json
+token.json
+.env
+client_secret.json
+token.pickle
