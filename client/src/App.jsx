@@ -5,6 +5,7 @@ import NoPage from "./shared/components/NoPage";
 import Documentos from "./features/Docs/pages/Documentos";
 import Contatos from "./features/Contacts/pages/Contatos";
 import './App.css'
+import Intermediacao from "./features/Docs/pages/Intermediacao";
 
 function App() {
 
@@ -17,6 +18,14 @@ function App() {
         </Route>
         <Route path="/docs" element={<Layout />}>
           <Route index element={<Documentos />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+        <Route path="/docs/intermediacao" element={<Layout />}>
+          <Route index element={<Documentos />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+        <Route path="/docs/venda" element={<Layout />}>
+          <Route index element={<Intermediacao />} />
           <Route path="*" element={<NoPage />} />
         </Route>
         <Route path="/contact" element={<Layout />}>

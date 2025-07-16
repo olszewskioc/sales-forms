@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 
 const cardStyle = {
   width: "320px",
@@ -27,25 +28,26 @@ const Documentos = () => {
         flexWrap: "wrap",
         justifyContent: "center",
         padding: "40px",
-        gap: "10%",
-        minHeight: "70vh",
+        gap: "10%"
       }}
     >
-      <div style={cardStyle} onClick={() => alert("Preencher Captação de Imóvel")}>
+      <Link to="/docs/intermediacao" style={cardStyle} onClick={() => alert("Preencher Captação de Imóvel")}>
         <div style={iconStyle}>🏠</div>
         <div style={{display: 'flex', flexDirection: 'column', gap: '50px'}}>
-            <h2>Captação de Imóvel</h2>
+            <h2>Intermediação Imobiliária</h2>
             <p>Formulário para cadastrar informações de um imóvel para venda ou locação.</p>
+            <img src="intermediacao.png" alt="Casa em miniatura na frente de um corretor imobiliário, com uma prancheta de negócios" />
         </div>
-      </div>
+      </Link>
 
-      <div style={cardStyle} onClick={() => alert("Preencher Contrato de Venda")}>
+      <Link to="/docs/venda" style={cardStyle} onClick={() => alert("Preencher Contrato de Venda")}>
         <div style={iconStyle}>📄</div>
         <div style={{display: 'flex', flexDirection: 'column', gap: '50px'}}>
             <h2>Contrato de Venda</h2>
             <p>Gerar contrato formal de venda com dados do comprador e vendedor.</p>
+            <img src="sale.jpg" alt="Casa em miniatura na frente de um corretor imobiliário, com uma prancheta de negócios" />
         </div>
-      </div>
+      </Link>
     </section>
   );
 };
